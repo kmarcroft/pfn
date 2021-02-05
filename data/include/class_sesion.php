@@ -321,6 +321,6 @@ class PFN_Sesion {
 	}
 }
 
-$PFN_sesion = &new PFN_Sesion($PFN_conf);
+$PFN_sesion = new PFN_Sesion($PFN_conf);
 $PFN_sesion->inicia();
 ?>
