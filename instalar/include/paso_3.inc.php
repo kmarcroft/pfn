@@ -32,7 +32,7 @@ $comprobar = array();
 $erros = $erro_mysql = $erro_gd = false;
 
 //  Comprobacion de version de PHP > 4.0.6
-$php_version = split('[/.-]', phpversion());
+$php_version = preg_split('[/.-]', phpversion());
 $php_version = intval($php_version[0].$php_version[1].$php_version[2]);
 
 if ($php_version > 406) {

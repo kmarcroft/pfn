@@ -27,6 +27,7 @@ programa. Si no ha sido así, escriba a la Free Software Foundation, Inc., en
 *******************************************************************************/
 
 defined('OK') or die();
+require_once 'mysql_mysqli_wrapper.php';
 
 /**
 * class PFN_MySQL
