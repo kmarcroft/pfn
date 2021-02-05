@@ -26,7 +26,9 @@ programa. Si no ha sido así, escriba a la Free Software Foundation, Inc., en
 675 Mass Ave, Cambridge, MA 02139, EEUU. 
 *******************************************************************************/
 
-
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 include ('paths.php');
 include_once ($PFN_paths['include'].'class_tempo.php');
 include_once ($PFN_paths['include'].'funcions.php');
