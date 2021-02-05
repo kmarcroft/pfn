@@ -34,6 +34,7 @@ include_once ($PFN_paths['include'].'funcions.php');
 include_once ($PFN_paths['include'].'class_conf.php');
 include_once ($PFN_paths['include'].'class_vars.php');
 include_once ($PFN_paths['include'].'class_arquivos.php');
+include_once ($PFN_paths['include'].'mysql_mysqli_wrapper.php');
 
 $PFN_paths['instalar'] = $PFN_paths['web'].'instalar/';
 
