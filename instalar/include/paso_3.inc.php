@@ -44,7 +44,7 @@ if ($php_version > 406) {
 
 // Comprobacion de MySQL compilado y version > 4.0.0
 if (extension_loaded('mysql')) {
-	$mysql_version = split('[/.-]', mysql_get_client_info());
+	$mysql_version = preg_split('[/.-]', mysql_get_client_info());
 	$mysql_version[1] = sprintf('%02d', $mysql_version[1]);
 	$mysql_version[2] = sprintf('%02d', $mysql_version[2]);
 	$mysql_version = intval($mysql_version[0].$mysql_version[1].$mysql_version[2]);
@@ -65,7 +65,7 @@ include_once ($PFN_paths['instalar'].'include/parsear_phpinfo.php');
 
 if (extension_loaded('gd')) {
 	preg_match('/([0-9\.]+)/', parsear_phpinfo('gd','GD Version'), $gd_version);
-	$gd_version[0] = split('[/.-]', $gd_version[1]);
+	$gd_version[0] = preg_split('[/.-]', $gd_version[1]);
 	$gd_version[0] = intval(substr(intval($gd_version[0][0]).intval($gd_version[0][1]).intval($gd_version[0][2]), 0, 3)); 
 
 	if (($gd_version[0] >= 200) || function_exists('imagecopyresampled')) {
