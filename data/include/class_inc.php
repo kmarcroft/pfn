@@ -188,12 +188,12 @@ class PFN_INC {
 
 			foreach (array('comun',$tipo) as $lista) {
 				foreach ($this->conf->g('inc',$lista) as $v) {
-				    print_r($v);
 					if (is_callable(array($this, $v['tipo']))) {
 						$this->resultado[$i]['campo'] = '<label for="'.$v['nome']
 							.(strlen($this->multiple)?('_'.$this->multiple):'')
 							.'">'.$this->conf->t($v['nome']).'</label>';
 						// Llamada a la función que genera el html para textarea o text
+							var_dump($v['tipo']);
 						$this->$v['tipo']($i,$v);
 						$i++;
 					}
