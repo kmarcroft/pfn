@@ -188,6 +188,7 @@ class PFN_INC {
 
 			foreach (array('comun',$tipo) as $lista) {
 				foreach ($this->conf->g('inc',$lista) as $v) {
+				    print_r($v);
 					if (is_callable(array($this, $v['tipo']))) {
 						$this->resultado[$i]['campo'] = '<label for="'.$v['nome']
 							.(strlen($this->multiple)?('_'.$this->multiple):'')
