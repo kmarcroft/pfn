@@ -56,7 +56,7 @@ defined('OK') && defined('XESTION') or die();
 		</div>
 		<?php } ?>
 
-<?php echo $texto;?>
+<?php echo htmlentities($texto);?>
 <?php echo $PFN_conf->g('charset');?>
 <?php echo htmlentities($texto, ENT_NOQUOTES, $PFN_conf->g('charset')); ?>
 
