@@ -56,10 +56,7 @@ defined('OK') && defined('XESTION') or die();
 		</div>
 		<?php } ?>
 
-<?php echo htmlentities(htmlentities(mb_convert_encoding($texto, 'UTF-8', 'ASCII'), ENT_SUBSTITUTE, "UTF-8"));?>
-<?php echo $PFN_conf->g('charset');?>
-<?php echo htmlentities($texto, ENT_NOQUOTES, $PFN_conf->g('charset')); ?>
-
+<?php $texto = mb_convert_encoding($texto, 'UTF-8', 'ASCII');?>
 		<div style="width: 100%; text-align: center;">
 			<h2><?php echo $PFN_usuarios->get('conf'); ?></h2>
 			<form action="gdar.php?<?php echo PFN_get_url(false); ?>" method="post" onsubmit="return submitonce();">
