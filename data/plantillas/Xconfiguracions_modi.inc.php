@@ -55,7 +55,7 @@ defined('OK') && defined('XESTION') or die();
 			?>
 		</div>
 		<?php } ?>
-
+<?php var_dump($texto);?>
 		<div style="width: 100%; text-align: center;">
 			<h2><?php echo $PFN_usuarios->get('conf'); ?></h2>
 			<form action="gdar.php?<?php echo PFN_get_url(false); ?>" method="post" onsubmit="return submitonce();">
