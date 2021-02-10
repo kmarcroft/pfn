@@ -25,9 +25,7 @@ Debería haber recibido una copia de la Licencia Pública General junto con este
 programa. Si no ha sido así, escriba a la Free Software Foundation, Inc., en
 675 Mass Ave, Cambridge, MA 02139, EEUU. 
 *******************************************************************************/
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
+
 $relativo = '../../';
 $texto = '';
 
