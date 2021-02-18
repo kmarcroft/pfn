@@ -448,7 +448,7 @@ class PFN_Accions extends PFN_Niveles {
 	*
 	* return integer
 	*/
-	function enlace ($orixe, $destino) {
+	function enlace ($dir, $cal, $abs=true) {
 		$dir_destino = $this->dir_destino($destino);
 
 		// Anula si no existe el destino

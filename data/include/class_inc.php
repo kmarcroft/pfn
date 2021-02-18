@@ -193,7 +193,8 @@ class PFN_INC {
 							.(strlen($this->multiple)?('_'.$this->multiple):'')
 							.'">'.$this->conf->t($v['nome']).'</label>';
 						// Llamada a la función que genera el html para textarea o text
-						$this->$v['tipo']($i,$v);
+						$method = $v['tipo'];
+						$this->$method($i,$v);
 						$i++;
 					}
 				}
